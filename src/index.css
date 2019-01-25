@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-image: url('/images/forest.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
