@@ -68,7 +68,7 @@ class App extends Component {
       <Wrapper>
         <Header>
         <h1>Owls</h1>
-        <h4>Don't pick me twice!</h4>
+        <h4>Don&#39;t pick me twice!</h4>
         <div className="scores">
         <p className="text-left">Score: {this.state.Score}</p>
         <p className="text-right">Top Score: {this.state.TopScore}</p>
