@@ -1,13 +1,13 @@
 {
-  "main.css": "/clicky-owls/static/css/main.188f1621.chunk.css",
-  "main.js": "/clicky-owls/static/js/main.ae2b73df.chunk.js",
-  "main.js.map": "/clicky-owls/static/js/main.ae2b73df.chunk.js.map",
+  "main.css": "/clicky-owls/static/css/main.8fa90ace.chunk.css",
+  "main.js": "/clicky-owls/static/js/main.fcfa09a2.chunk.js",
+  "main.js.map": "/clicky-owls/static/js/main.fcfa09a2.chunk.js.map",
   "static/js/1.9c49b165.chunk.js": "/clicky-owls/static/js/1.9c49b165.chunk.js",
   "static/js/1.9c49b165.chunk.js.map": "/clicky-owls/static/js/1.9c49b165.chunk.js.map",
   "runtime~main.js": "/clicky-owls/static/js/runtime~main.7f871c78.js",
   "runtime~main.js.map": "/clicky-owls/static/js/runtime~main.7f871c78.js.map",
-  "static/css/main.188f1621.chunk.css.map": "/clicky-owls/static/css/main.188f1621.chunk.css.map",
+  "static/css/main.8fa90ace.chunk.css.map": "/clicky-owls/static/css/main.8fa90ace.chunk.css.map",
   "index.html": "/clicky-owls/index.html",
-  "precache-manifest.77c255249c773021bd793a7cc482a6fc.js": "/clicky-owls/precache-manifest.77c255249c773021bd793a7cc482a6fc.js",
+  "precache-manifest.811eb42edc2665653ef35b547fa24e1f.js": "/clicky-owls/precache-manifest.811eb42edc2665653ef35b547fa24e1f.js",
   "service-worker.js": "/clicky-owls/service-worker.js"
 }
