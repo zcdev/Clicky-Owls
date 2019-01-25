@@ -28,39 +28,39 @@ class App extends Component {
 
   clickOwl = id => {
 
+    this.setState({
+      Owls: this.shuffleCards(OwlCards)
+    });
+
+    if (this.state.Clicked.includes(id)) {
+
       this.setState({
-        Owls: this.shuffleCards(OwlCards)
+        Score: 0,
+        Clicked: [],
+        Message: "Your guess is wrong!"
       });
 
-      if (this.state.Clicked.includes(id)) {
+    } else {
 
+      this.setState({
+        Score: this.state.Score + 1,
+        TopScore: this.state.TopScore + 1,
+        Clicked: this.state.Clicked.concat([id]),
+        Message: "Your guess is correct!"
+      });
+
+      if (this.state.Score < this.state.TopScore) {
         this.setState({
-          Score: 0,
-          Clicked: [],
-          Message: "Your guess is wrong!"
+          TopScore: this.state.TopScore
         });
-
-      } else {
-
-        this.setState({
-          Score: this.state.Score + 1,
-          TopScore: this.state.TopScore + 1,
-          Clicked: this.state.Clicked.concat([id]),
-          Message: "Your guess is correct!"
-        });
-
-        if (this.state.Score < this.state.TopScore) {
-          this.setState({
-            TopScore: this.state.TopScore
-          });
-        }
-
-        if (this.state.TopScore === 12) {
-          this.setState({
-            Message: "Your win!"
-          });
-        }
       }
+
+      if (this.state.TopScore === 12) {
+        this.setState({
+          Message: "Your win!"
+        });
+      }
+    }
   };
 
   render() {
