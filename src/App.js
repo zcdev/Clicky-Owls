@@ -57,7 +57,7 @@ class App extends Component {
 
       if (this.state.TopScore === 12) {
         this.setState({
-          Message: "Your win!"
+          Message: "You won!"
         });
       }
     }
