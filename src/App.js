@@ -43,7 +43,7 @@ class App extends Component {
         this.setState({
           Score: this.state.Score + 1,
           TopScore: this.state.TopScore + 1,
-          Clicked: this.state.Clicked.push([id])
+          Clicked: this.state.Clicked.concat([id])
         });
 
         if (this.state.Score < this.state.TopScore) {
