@@ -4,9 +4,13 @@ import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import Owls from "./Owls.json";
 
+// Clone the owls for shuffling because state object is immutable
 const OwlCards = Owls;
 
+// App component
 class App extends Component {
+
+// Initial state
   state = {
     Owls,
     Score: 0,
@@ -26,12 +30,15 @@ class App extends Component {
     return OwlCards
   };
 
+  // Click owl event
   clickOwl = id => {
 
+    // Owls are shuffled everytime they are clicked
     this.setState({
       Owls: this.shuffleCards(OwlCards)
     });
 
+    // If the owl is clicked twice
     if (this.state.Clicked.includes(id)) {
 
       this.setState({
@@ -40,6 +47,7 @@ class App extends Component {
         Message: "Your guess is wrong!"
       });
 
+    // If the owl is only clicked once
     } else {
 
       this.setState({
@@ -56,6 +64,7 @@ class App extends Component {
         }
       );
 
+      // When score is less than top score, top score stays as top score
       if (this.state.Score < this.state.TopScore) {
         this.setState({
           TopScore: this.state.TopScore
@@ -64,6 +73,7 @@ class App extends Component {
     }
   };
 
+  // Render output
   render() {
     return (
       <Wrapper>
