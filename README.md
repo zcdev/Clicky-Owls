@@ -16,4 +16,4 @@ In this project, I built a memory testing game with React. I learned how to brea
 
 https://zcdev.github.io/clicky-owls/
 
-![Clicky Owls](../public/images/clicky-owls.png)
+![Clicky Owls](public/images/clicky-owls.png)
