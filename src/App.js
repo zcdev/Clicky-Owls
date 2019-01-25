@@ -11,7 +11,8 @@ class App extends Component {
     Owls,
     Score: 0,
     TopScore: 0,
-    Clicked: []
+    Clicked: [],
+    Message: ""
   };
 
   // Fisher Yates Array Shuffle Algorithm
@@ -35,7 +36,8 @@ class App extends Component {
 
         this.setState({
           Score: 0,
-          Clicked: []
+          Clicked: [],
+          Message: "Your guess is wrong!"
         });
 
       } else {
@@ -43,11 +45,14 @@ class App extends Component {
         this.setState({
           Score: this.state.Score + 1,
           TopScore: this.state.TopScore + 1,
-          Clicked: this.state.Clicked.concat([id])
+          Clicked: this.state.Clicked.concat([id]),
+          Message: "Your guess is correct!"
         });
 
         if (this.state.Score < this.state.TopScore) {
-          this.setState({ TopScore: this.state.TopScore });
+          this.setState({
+            TopScore: this.state.TopScore
+          });
         }
       }
   };
@@ -61,6 +66,7 @@ class App extends Component {
         <div className="scores">
         <p className="text-left">Score: {this.state.Score}</p>
         <p className="text-right">Top Score: {this.state.TopScore}</p>
+        <p>{this.state.Message}</p>
         </div>
         </Header>
         {this.state.Owls.map(owl => (
