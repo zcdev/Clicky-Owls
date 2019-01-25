@@ -47,17 +47,18 @@ class App extends Component {
         TopScore: this.state.TopScore + 1,
         Clicked: this.state.Clicked.concat(id),
         Message: "Your guess is correct!"
-      });
+      }, () => {
+          if (this.state.Score === 12) {
+            this.setState({
+              Message: "You win!"
+            });
+          }
+        }
+      );
 
       if (this.state.Score < this.state.TopScore) {
         this.setState({
           TopScore: this.state.TopScore
-        });
-      }
-
-      if (this.state.TopScore === 12) {
-        this.setState({
-          Message: "You won!"
         });
       }
     }
