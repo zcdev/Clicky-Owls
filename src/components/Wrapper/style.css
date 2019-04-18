@@ -8,4 +8,5 @@
   align-content: flex-start;
   overflow: auto;
   max-width: 1240px;
+  margin: 0 auto;
 }
